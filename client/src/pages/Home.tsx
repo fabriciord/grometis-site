@@ -250,7 +250,7 @@ export default function Home() {
                   <Mail className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
-                <p className="text-blue-100">grometis@proton.me</p>
+                <p className="text-blue-100">grometis@grometis.com</p>
               </div>
               
               <div className="text-center">
@@ -302,7 +302,7 @@ export default function Home() {
             <div>
               <h4 className="font-semibold mb-4">Contato</h4>
               <ul className="space-y-2 text-slate-400">
-                <li>grometis@proton.me</li>
+                <li>grometis@grometis.com</li>
                 <li>+55 (11) 98753-2441</li>
                 <li>São Paulo, Brasil</li>
               </ul>

@@ -8,5 +8,5 @@
 - [x] Criar checkpoint final
 - [x] Publicar site
 
-- [x] Atualizar email de contato para grometis@proton.me
+- [x] Atualizar email de contato para grometis@grometis.com
 - [x] Atualizar telefone de contato para +55 (11) 98753-2441
