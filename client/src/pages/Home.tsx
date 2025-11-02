@@ -83,7 +83,7 @@ export default function Home() {
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
             transition={{ duration: 0.8 }}
           >
-            <img src="/grometis_logo_principal.png" alt="GrOMEtiS" className="mx-auto mb-8 h-24" />
+            <img src="/Grometis_laranja.png" alt="GrOMEtiS" className="mx-auto mb-8 h-24" />
             <h1 className="text-5xl md:text-6xl font-bold text-slate-800 mb-6">
               Transformamos Ideias em
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-600"> Soluções Digitais</span>
