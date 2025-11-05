@@ -104,3 +104,7 @@ temp/
 *.db
 *.sqlite
 *.sqlite3
+
+# Cloudflare
+.wrangler/
+wrangler.toml.bak

@@ -1,0 +1,36 @@
+name = "grometis-site"
+compatibility_date = "2024-11-05"
+
+[env.production]
+name = "grometis-site"
+
+[env.preview]
+name = "grometis-site-preview"
+
+# Configurações do Pages
+pages_build_output_dir = "dist/public"
+
+# Variáveis de ambiente (adicione conforme necessário)
+[vars]
+NODE_ENV = "production"
+
+# Headers personalizados (opcional)
+[[headers]]
+for = "/*"
+[headers.values]
+X-Frame-Options = "DENY"
+X-Content-Type-Options = "nosniff"
+X-XSS-Protection = "1; mode=block"
+Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Cache estático para assets
+[[headers]]
+for = "/assets/*"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache para outros recursos estáticos
+[[headers]]
+for = "*.{js,css,png,jpg,jpeg,gif,webp,svg,ico,woff,woff2}"
+[headers.values]
+Cache-Control = "public, max-age=86400"
