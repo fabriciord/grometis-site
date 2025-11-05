@@ -17,8 +17,13 @@ Este arquivo contém as instruções para configurar o projeto no Cloudflare Pag
 Adicione as seguintes variáveis no dashboard do Cloudflare Pages:
 
 ```
-NODE_ENV=production
+VITE_APP_TITLE=GrOMEtiS
+VITE_APP_LOGO=/Grometis_laranja.png
+VITE_ANALYTICS_ENDPOINT=
+VITE_ANALYTICS_WEBSITE_ID=
 ```
+
+**Importante**: Não adicione `NODE_ENV=production` pois o Vite define isso automaticamente no build.
 
 ### 3. Domínio Personalizado (Opcional)
 
