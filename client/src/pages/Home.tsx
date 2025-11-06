@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge'
 import { ArrowRight, Code, Database, Zap, Users, BarChart3, Settings, Mail, Phone, MapPin, CheckCircle } from 'lucide-react'
 import { motion } from 'framer-motion'
+import { Link } from 'wouter'
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false)
@@ -305,6 +306,15 @@ export default function Home() {
                 <li>grometis@grometis.com</li>
                 <li>+55 (11) 98753-2441</li>
                 <li>São Paulo, Brasil</li>
+              </ul>
+              
+              <h4 className="font-semibold mb-4 mt-6">Legal</h4>
+              <ul className="space-y-2 text-slate-400">
+                <li>
+                  <Link href="/privacy-policy" className="hover:text-white transition-colors">
+                    Política de Privacidade
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>
