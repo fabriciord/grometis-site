@@ -12,12 +12,7 @@ cp privacy-policy.html dist/static/
 cp 404.html dist/static/
 
 echo "🖼️  Copying assets..."
-cp -r client/public/* dist/static/
-
-# Remover arquivos de configuração que não são necessários no static
-rm -f dist/static/_redirects
-rm -f dist/static/_headers
-rm -rf dist/static/_functions
+cp -r assets/* dist/static/
 
 # Criar arquivo _redirects simples para páginas estáticas
 echo "📝 Creating static redirects..."
