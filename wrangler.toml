@@ -1,0 +1,84 @@
+# Configurações específicas para Cloudflare Pagesname = "grometis-site"
+
+pages_build_output_dir = "dist/static"compatibility_date = "2024-11-05"
+
+
+
+[build][env.production]
+
+# Comando de build para Cloudflare Pagesname = "grometis-site"
+
+command = "npm run build"
+
+[env.preview]
+
+# Diretório de saídaname = "grometis-site-preview"
+
+publish = "dist/static"
+
+# Configurações do Pages
+
+# Variáveis de ambiente para produçãopages_build_output_dir = "dist/public"
+
+[env.production]
+
+NODE_ENV = "production"# Variáveis de ambiente (adicione conforme necessário)
+
+[vars]
+
+[env.preview]NODE_ENV = "production"
+NODE_ENV = "preview"
+
+# Headers de segurança específicos para Cloudflare Pages
+[[headers]]
+for = "/*"
+[headers.values]
+X-Frame-Options = "DENY"
+X-Content-Type-Options = "nosniff"
+X-XSS-Protection = "1; mode=block"
+Referrer-Policy = "strict-origin-when-cross-origin"
+Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# Cache para assets estáticos
+[[headers]]
+for = "/*.css"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+for = "/*.js"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+for = "/*.png"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+for = "/*.ico"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache para HTML (mais curto para permitir atualizações)
+[[headers]]
+for = "/*.html"
+[headers.values]
+Cache-Control = "public, max-age=3600"
+
+# Redirects para SPA
+[[redirects]]
+from = "/privacy"
+to = "/privacy-policy.html"
+status = 301
+
+[[redirects]]
+from = "/privacidade"
+to = "/privacy-policy.html"
+status = 301
+
+# Redirect para páginas não encontradas
+[[redirects]]
+from = "/*"
+to = "/404.html"
+status = 404

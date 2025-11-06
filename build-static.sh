@@ -14,44 +14,16 @@ cp 404.html dist/static/
 echo "🖼️  Copying assets..."
 cp -r assets/* dist/static/
 
-# Criar arquivo _redirects simples para páginas estáticas
-echo "📝 Creating static redirects..."
-cat > dist/static/_redirects << EOF
-# Static HTML redirects
-/privacy-policy   /privacy-policy.html   200
-/*                /404.html              404
-EOF
+echo "📝 Copying Cloudflare Pages config..."
+cp _redirects dist/static/
+cp _headers dist/static/
 
-# Criar arquivo _headers otimizado
-echo "🔧 Creating optimized headers..."
-cat > dist/static/_headers << EOF
-# Headers for static site
-/*
-  X-Frame-Options: DENY
-  X-Content-Type-Options: nosniff
-  X-XSS-Protection: 1; mode=block
-  Referrer-Policy: strict-origin-when-cross-origin
-  Cache-Control: public, max-age=3600
+echo "⚡ Copying Cloudflare Functions..."
+if [ -d "functions" ]; then
+  cp -r functions dist/static/
+fi
 
-/*.html
-  Cache-Control: public, max-age=300
-
-/*.css
-  Cache-Control: public, max-age=31536000, immutable
-
-/*.js
-  Cache-Control: public, max-age=31536000, immutable
-
-/*.png
-  Cache-Control: public, max-age=31536000, immutable
-
-/*.jpg
-  Cache-Control: public, max-age=31536000, immutable
-
-/*.ico
-  Cache-Control: public, max-age=31536000, immutable
-EOF
-
+echo "🔧 Cloudflare Pages configuration applied..."
 echo "✅ Static HTML site built successfully!"
 echo "📁 Files are in: dist/static/"
 echo ""
