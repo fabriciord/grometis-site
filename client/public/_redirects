@@ -1,1 +1,6 @@
-/*    /index.html   200
+# Redirects for static HTML pages
+/privacy-policy   /privacy-policy.html   200
+/404              /404.html              200
+
+# SPA fallback (should be last)
+/*                /index.html            200

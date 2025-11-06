@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidade - GrOMEtiS</title>
+    <meta name="description" content="Política de Privacidade da GrOMEtiS Software & Integration. Saiba como protegemos seus dados.">
+    <link rel="icon" type="image/png" href="/grometis_favicon.png">
+    <link rel="apple-touch-icon" href="/grometis_favicon.png">
+    
+    <style>
+        /* Reset e base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #334155;
+            background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Header */
+        .header {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #e2e8f0;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            height: 3rem;
+        }
+
+        .nav {
+            display: none;
+            gap: 2rem;
+        }
+
+        .nav a {
+            color: #64748b;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav a:hover {
+            color: #2563eb;
+        }
+
+        @media (min-width: 768px) {
+            .nav {
+                display: flex;
+            }
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #1d4ed8;
+            transform: translateY(-1px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #2563eb;
+            color: #2563eb;
+        }
+
+        .btn-outline:hover {
+            background: #2563eb;
+            color: white;
+        }
+
+        /* Main Content */
+        .main {
+            padding: 3rem 0 5rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            transition: all 0.3s;
+        }
+
+        .back-link:hover {
+            background: rgba(37, 99, 235, 0.1);
+        }
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .page-title h1 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 1rem;
+        }
+
+        .page-title p {
+            font-size: 1.25rem;
+            color: #64748b;
+            max-width: 48rem;
+            margin: 0 auto;
+        }
+
+        .content-grid {
+            display: grid;
+            gap: 2rem;
+            max-width: 4xl;
+            margin: 0 auto;
+        }
+
+        .policy-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+            border: 1px solid #f1f5f9;
+        }
+
+        .policy-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .policy-icon {
+            width: 3rem;
+            height: 3rem;
+            background: #eff6ff;
+            border-radius: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2563eb;
+            font-size: 1.5rem;
+        }
+
+        .policy-card h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        .policy-content {
+            color: #64748b;
+            line-height: 1.8;
+        }
+
+        .policy-content p {
+            margin-bottom: 1rem;
+        }
+
+        .policy-content ul {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .policy-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .policy-content strong {
+            color: #1e293b;
+        }
+
+        .highlight-box {
+            background: #eff6ff;
+            border-left: 4px solid #2563eb;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.5rem;
+        }
+
+        .contact-section {
+            background: #1e293b;
+            color: white;
+            padding: 3rem 0;
+            margin-top: 3rem;
+            border-radius: 1rem;
+        }
+
+        .contact-section h2 {
+            color: white;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .contact-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .contact-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 0.75rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .contact-item-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            background: #2563eb;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.25rem;
+        }
+
+        .contact-item h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item a {
+            color: #94a3b8;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            color: white;
+        }
+
+        /* Footer */
+        .footer {
+            background: #0f172a;
+            color: #94a3b8;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeInUp 0.8s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/index.html">
+                    <img src="/grometis_logo_horizontal.png" alt="GrOMEtiS Software & Integration" class="logo">
+                </a>
+                <nav class="nav">
+                    <a href="/index.html#services">Serviços</a>
+                    <a href="/index.html#about">Sobre</a>
+                    <a href="/index.html#contact">Contato</a>
+                </nav>
+                <a href="/index.html#contact" class="btn">
+                    ✉️ Fale Conosco
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <a href="/index.html" class="back-link">
+                ← Voltar à Homepage
+            </a>
+
+            <div class="page-title">
+                <h1 class="animate-fade-in">Política de Privacidade</h1>
+                <p class="animate-fade-in">
+                    Transparência e segurança no tratamento dos seus dados pessoais
+                </p>
+            </div>
+
+            <div class="content-grid">
+                <div class="policy-card animate-fade-in">
+                    <div class="policy-header">
+                        <div class="policy-icon">👥</div>
+                        <h2>1. Quais informações coletamos?</h2>
+                    </div>
+                    <div class="policy-content">
+                        <p>Coletamos informações que você nos fornece diretamente durante sua interação com o bot. Isso pode incluir:</p>
+                        <ul>
+                            <li><strong>Nome:</strong> Para personalizar a comunicação.</li>
+                            <li><strong>Número de telefone:</strong> Essencial para a comunicação via WhatsApp.</li>
+                            <li><strong>Conteúdo das mensagens:</strong> As perguntas, comandos e informações que você envia ao interagir com o bot.</li>
+                            <li><strong>Dados de contato adicionais:</strong> Quando fornecidos voluntariamente para melhor atendimento.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="policy-card animate-fade-in">
+                    <div class="policy-header">
+                        <div class="policy-icon">📄</div>
+                        <h2>2. Como usamos suas informações?</h2>
+                    </div>
+                    <div class="policy-content">
+                        <p>As informações coletadas são usadas para as seguintes finalidades:</p>
+                        <ul>
+                            <li><strong>Operar o bot:</strong> Para processar suas solicitações e fornecer as respostas e serviços solicitados.</li>
+                            <li><strong>Melhorar nossos serviços:</strong> Analisamos as interações de forma anonimizada para entender como nosso bot está sendo usado e como podemos melhorá-lo.</li>
+                            <li><strong>Suporte ao cliente:</strong> Para ajudar a resolver problemas ou responder a perguntas que você possa ter.</li>
+                            <li><strong>Comunicação:</strong> Para enviar informações importantes sobre nossos serviços, caso você tenha consentido.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="policy-card animate-fade-in">
+                    <div class="policy-header">
+                        <div class="policy-icon">🛡️</div>
+                        <h2>3. Compartilhamento de informações</h2>
+                    </div>
+                    <div class="policy-content">
+                        <p>Nós não vendemos, alugamos ou compartilhamos suas informações pessoais com terceiros para fins de marketing. Suas informações podem ser compartilhadas apenas nas seguintes circunstâncias:</p>
+                        <ul>
+                            <li><strong>Com provedores de serviço:</strong> Podemos compartilhar informações com empresas que nos auxiliam a operar nosso serviço (como serviços de hospedagem), sob estritas obrigações de confidencialidade.</li>
+                            <li><strong>Por obrigação legal:</strong> Se formos obrigados por lei, processo judicial ou solicitação governamental a divulgar suas informações.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="policy-card animate-fade-in">
+                    <div class="policy-header">
+                        <div class="policy-icon">🔒</div>
+                        <h2>4. Armazenamento e Segurança dos Dados</h2>
+                    </div>
+                    <div class="policy-content">
+                        <p>Empregamos medidas de segurança técnicas e administrativas para proteger suas informações contra acesso não autorizado, alteração, divulgação ou destruição.</p>
+                        <ul>
+                            <li>As conversas são protegidas pela criptografia de ponta a ponta do WhatsApp.</li>
+                            <li>Seus dados são armazenados em servidores seguros pelo tempo necessário para cumprir as finalidades para as quais foram coletados.</li>
+                            <li>Implementamos controles de acesso rigorosos e monitoramento contínuo de segurança.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="policy-card animate-fade-in">
+                    <div class="policy-header">
+                        <div class="policy-icon">⏰</div>
+                        <h2>5. Retenção de Dados</h2>
+                    </div>
+                    <div class="policy-content">
+                        <p>Mantemos suas informações pessoais apenas pelo tempo necessário para cumprir as finalidades descritas nesta política, a menos que um período de retenção mais longo seja exigido ou permitido por lei.</p>
+                        
+                        <div class="highlight-box">
+                            <p><strong>Período de Retenção:</strong> Os dados são mantidos por até 24 meses após a última interação, salvo disposição legal em contrário.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="policy-card animate-fade-in">
+                    <div class="policy-header">
+                        <div class="policy-icon">⚖️</div>
+                        <h2>6. Seus Direitos</h2>
+                    </div>
+                    <div class="policy-content">
+                        <p>De acordo com a Lei Geral de Proteção de Dados (LGPD), você tem os seguintes direitos:</p>
+                        <ul>
+                            <li><strong>Acesso:</strong> Solicitar informações sobre quais dados pessoais processamos sobre você.</li>
+                            <li><strong>Retificação:</strong> Solicitar a correção de dados imprecisos ou incompletos.</li>
+                            <li><strong>Exclusão:</strong> Solicitar a eliminação de seus dados pessoais.</li>
+                            <li><strong>Portabilidade:</strong> Solicitar a transferência de seus dados para outro controlador.</li>
+                            <li><strong>Oposição:</strong> Opor-se ao processamento de seus dados pessoais.</li>
+                        </ul>
+                        
+                        <div class="highlight-box">
+                            <p><strong>Como exercer seus direitos:</strong> Entre em contato conosco através dos canais disponíveis na seção de contato.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="policy-card animate-fade-in">
+                    <div class="policy-header">
+                        <div class="policy-icon">📞</div>
+                        <h2>7. Contato</h2>
+                    </div>
+                    <div class="policy-content">
+                        <p>Se você tiver dúvidas sobre esta Política de Privacidade ou sobre como tratamos seus dados pessoais, entre em contato conosco:</p>
+                        
+                        <div class="contact-grid" style="margin-top: 2rem;">
+                            <div class="contact-item">
+                                <div class="contact-item-icon">✉️</div>
+                                <h3>Email</h3>
+                                <a href="mailto:privacy@grometis.com">privacy@grometis.com</a>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-item-icon">📞</div>
+                                <h3>Telefone</h3>
+                                <a href="tel:+5511987532441">+55 (11) 98753-2441</a>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-item-icon">📍</div>
+                                <h3>Endereço</h3>
+                                <p>São Paulo, Brasil</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="policy-card animate-fade-in">
+                    <div class="policy-header">
+                        <div class="policy-icon">🔄</div>
+                        <h2>8. Alterações nesta Política</h2>
+                    </div>
+                    <div class="policy-content">
+                        <p>Podemos atualizar esta Política de Privacidade periodicamente. Quando fizermos alterações significativas, notificaremos você por meio dos nossos canais de comunicação habituais.</p>
+                        
+                        <div class="highlight-box">
+                            <p><strong>Última atualização:</strong> 6 de novembro de 2024</p>
+                        </div>
+                        
+                        <p>Recomendamos que você revise esta política regularmente para se manter informado sobre como protegemos suas informações.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="contact-section">
+                <div class="container">
+                    <h2>Dúvidas sobre Privacidade?</h2>
+                    <div style="text-align: center;">
+                        <a href="mailto:privacy@grometis.com" class="btn" style="margin-right: 1rem;">
+                            ✉️ Enviar Mensagem
+                        </a>
+                        <a href="/index.html" class="btn btn-outline">
+                            ← Voltar ao Site
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 GrOMEtiS Software & Integration. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards
+        document.querySelectorAll('.policy-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.6s ease-out';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
