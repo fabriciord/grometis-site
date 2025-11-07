@@ -1,7 +1,11 @@
-# Redirects para Cloudflare Pages
-/privacy-policy   /privacy-policy.html   200
+# Redirects para Cloudflare Pages - URLs específicas primeiro
+/privacy-policy   /privacy-policy.html   200!
+/privacy-policy/  /privacy-policy.html   200!
 /privacy          /privacy-policy.html   301
 /privacidade      /privacy-policy.html   301
 
-# Fallback para 404 
-/*                /404.html              404
+# Fallback para SPA (importante para URLs diretas)
+/*                /index.html            200
+
+# 404 para arquivos não encontrados
+/404              /404.html              200

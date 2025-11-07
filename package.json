@@ -9,7 +9,9 @@
     "preview": "cd dist/static && python3 -m http.server 8080",
     "clean": "rm -rf dist/",
     "deploy": "wrangler pages deploy dist/static --project-name=grometis-site",
-    "pages:dev": "wrangler pages dev dist/static"
+    "pages:dev": "wrangler pages dev dist/static",
+    "configure:domain": "./configure-domain.sh",
+    "deploy:production": "npm run build && npm run deploy"
   },
   "keywords": [
     "html",
